@@ -4,10 +4,8 @@ import 'package:signup_login_flow_jan31/screens/login_screen.dart';
 import 'package:signup_login_flow_jan31/screens/registration_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
 
   static const String screenID = 'welcome_screen';
-
 
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();

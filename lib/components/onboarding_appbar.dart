@@ -20,5 +20,19 @@ class OnboardingAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => Size.fromHeight(50.0);
 }
+
+
+
+
+// // super helpful https://www.youtube.com/watch?v=IxCeJS9yA8w&list=PL_D-RntzgLvbbB7Uub06wW44znOoWJro4&index=17
+// final db = FirebaseFirestore.instance;
+
+// ElevatedButton(
+// child: Text('Keep Going'),
+// onPressed: () async {
+// // await db.collection('profile').add(profile.toJason());
+// Navigator.pushNamed(context, WelcomeScreen.screenID);
+// },
+// ),

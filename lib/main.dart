@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:signup_login_flow_jan31/screens/chat_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:signup_login_flow_jan31/screens/chat/chat_screen.dart';
 import 'package:signup_login_flow_jan31/screens/registration_screen.dart';
 import 'package:signup_login_flow_jan31/screens/welcome_screen.dart';
+import 'package:signup_login_flow_jan31/screens/hobbies_screen.dart';
 import 'screens/login_screen.dart';
+import 'package:signup_login_flow_jan31/screens/gender_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,9 +31,10 @@ class MyApp extends StatelessWidget {
       initialRoute: WelcomeScreen.screenID,
       routes: {
         LoginScreen.screenID: (context) => const LoginScreen(),
-        RegistrationScreen.screenID: (context) => const RegistrationScreen(),
-        WelcomeScreen.screenID: (context) => const WelcomeScreen(),
+        RegistrationScreen.screenID: (context) => RegistrationScreen(),
+        WelcomeScreen.screenID: (context) =>  WelcomeScreen(),
         ChatScreen.screenID: (context) => const ChatScreen(),
+        GenderScreen.screenID: (context) => const GenderScreen(),
       },
     );
   }
